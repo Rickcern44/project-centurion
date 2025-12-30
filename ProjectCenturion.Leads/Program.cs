@@ -2,6 +2,7 @@ using MassTransit;
 using ProjectCenturion.Leads.Libraries.Application;
 using ProjectCenturion.Leads.Libraries.Application.Interfaces;
 using ProjectCenturion.Models.DomainModels;
+using ProjectCenturion.Shared.Messaging.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +27,7 @@ builder.Services.AddMassTransit(x =>
             host.Password(queueSettings["Password"]);
         });
 
-        cfg.Message<Lead>(config => { config.SetEntityName("lead_ingested"); });
+        cfg.Message<LeadIngested>(config => { config.SetEntityName("lead.ingested"); });
     });
 });
 

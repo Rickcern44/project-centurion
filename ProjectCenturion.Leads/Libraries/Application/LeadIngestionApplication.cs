@@ -8,6 +8,7 @@ public class LeadIngestionApplication(IBus bus) : ILeadIngestionApplication
 {
     public async Task IngestLeadAsync(Lead lead, Guid leadSourceId)
     {
-        await bus.Publish(lead);
+        var message = Lead.MapToLeadIngestedMessage(lead);
+        await bus.Publish(message);
     }
 }

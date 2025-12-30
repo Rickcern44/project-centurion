@@ -21,12 +21,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ProjectCenturion.Models\ProjectCenturion.Models.csproj" />
       <ProjectReference Include="..\ProjectCenturion.ServiceDefaults\ProjectCenturion.ServiceDefaults.csproj" />
+      <ProjectReference Include="..\ProjectCenturion.Shared\ProjectCenturion.Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Libraries\Domain\" />
       <Folder Include="Libraries\Infrastructure\Publishers\" />
     </ItemGroup>
 

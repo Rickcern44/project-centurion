@@ -22,5 +22,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ProjectCenturion.Leads\ProjectCenturion.Leads.csproj" />
+      <ProjectReference Include="..\ProjectCenturion.ServiceDefaults\ProjectCenturion.ServiceDefaults.csproj" />
     </ItemGroup>
 </Project>

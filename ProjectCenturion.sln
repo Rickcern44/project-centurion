@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCenturion.Leads", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCenturion.WorkerFunctions", "ProjectCenturion.WorkerFunctions\ProjectCenturion.WorkerFunctions.csproj", "{E5CFA2E8-82B1-48EB-9A6D-3BF122F12BD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCenturion.Models", "ProjectCenturion.Models\ProjectCenturion.Models.csproj", "{0DC884A2-BB6F-4476-BB7A-C0B2B7038D9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCenturion.Shared", "ProjectCenturion.Shared\ProjectCenturion.Shared.csproj", "{885EABED-9E42-4BD4-8BBB-167F11B200B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,9 +32,9 @@ Global
 		{E5CFA2E8-82B1-48EB-9A6D-3BF122F12BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5CFA2E8-82B1-48EB-9A6D-3BF122F12BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5CFA2E8-82B1-48EB-9A6D-3BF122F12BD9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0DC884A2-BB6F-4476-BB7A-C0B2B7038D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0DC884A2-BB6F-4476-BB7A-C0B2B7038D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0DC884A2-BB6F-4476-BB7A-C0B2B7038D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0DC884A2-BB6F-4476-BB7A-C0B2B7038D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{885EABED-9E42-4BD4-8BBB-167F11B200B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{885EABED-9E42-4BD4-8BBB-167F11B200B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{885EABED-9E42-4BD4-8BBB-167F11B200B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{885EABED-9E42-4BD4-8BBB-167F11B200B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
