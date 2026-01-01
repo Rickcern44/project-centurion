@@ -10,7 +10,11 @@ WORKDIR /src
 COPY ["ProjectCenturion.Leads/ProjectCenturion.Leads.csproj", "ProjectCenturion.Leads/"]
 COPY ["ProjectCenturion.Shared/ProjectCenturion.Shared.csproj", "ProjectCenturion.Shared/"]
 RUN dotnet restore "ProjectCenturion.Leads/ProjectCenturion.Leads.csproj"
-COPY . .
+
+COPY ["ProjectCenturion.Leads/", "ProjectCenturion.Leads/"]
+COPY ["ProjectCenturion.Shared/", "ProjectCenturion.Shared/"]
+COPY ["ProjectCenturion.ServiceDefaults/", "ProjectCenturion.ServiceDefaults/"]
+
 WORKDIR "/src/ProjectCenturion.Leads"
 RUN dotnet build "./ProjectCenturion.Leads.csproj" -c $BUILD_CONFIGURATION -o /app/build
 

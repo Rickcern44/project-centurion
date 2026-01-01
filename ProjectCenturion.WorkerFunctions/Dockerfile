@@ -8,7 +8,12 @@ WORKDIR /src
 COPY ["ProjectCenturion.WorkerFunctions/ProjectCenturion.WorkerFunctions.csproj", "ProjectCenturion.WorkerFunctions/"]
 COPY ["ProjectCenturion.Shared/ProjectCenturion.Shared.csproj", "ProjectCenturion.Shared/"]
 RUN dotnet restore "ProjectCenturion.WorkerFunctions/ProjectCenturion.WorkerFunctions.csproj"
-COPY . .
+
+
+COPY ["ProjectCenturion.WorkerFunctions/", "ProjectCenturion.WorkerFunctions/"]
+COPY ["ProjectCenturion.Shared/", "ProjectCenturion.Shared/"]
+COPY ["ProjectCenturion.ServiceDefaults/", "ProjectCenturion.ServiceDefaults/"]
+
 WORKDIR "/src/ProjectCenturion.WorkerFunctions"
 RUN dotnet build "./ProjectCenturion.WorkerFunctions.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
