@@ -8,6 +8,7 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["ProjectCenturion.Leads/ProjectCenturion.Leads.csproj", "ProjectCenturion.Leads/"]
+COPY ["ProjectCenturion.Shared/ProjectCenturion.Shared.csproj", "ProjectCenturion.Shared/"]
 RUN dotnet restore "ProjectCenturion.Leads/ProjectCenturion.Leads.csproj"
 COPY . .
 WORKDIR "/src/ProjectCenturion.Leads"
