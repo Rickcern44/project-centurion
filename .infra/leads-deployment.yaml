@@ -1,0 +1,31 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: leads-api
+  labels:
+    app: leads-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: leads-api
+  template:
+    metadata:
+      name: leads-api
+      labels:
+        app: leads-api
+    spec:
+      containers:
+        - name: leads-api
+          image: localhost:32000/projectcenturion-leads:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Production"
+            - name: QueueSettings__Host
+              value: "queue.internal"
+      restartPolicy: Always
+      
