@@ -27,5 +27,9 @@ spec:
               value: "Production"
             - name: QueueSettings__Host
               value: "queue.internal"
+            - name: AppSettings__QueueSettings__Username
+              value: "admin"
+            - name: AppSettings__QueueSettings__Password
+              value: "Password123"
       restartPolicy: Always
       

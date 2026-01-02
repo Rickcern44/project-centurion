@@ -23,8 +23,10 @@ builder.Services.AddMassTransit(x =>
     {
         cfg.Host("queue.internal", "/", host =>
         {
-            host.Username(queueSettings["Username"]);
-            host.Password(queueSettings["Password"]);
+            host.Username(queueSettings["Username"] ??
+                          throw new InvalidOperationException("Invalid Username for RabbitMQ"));
+            host.Password(queueSettings["Password"] ??
+                          throw new InvalidOperationException("Invalid Password for RabbitMQ"));
         });
 
         cfg.Message<LeadIngested>(config => { config.SetEntityName("lead.ingested"); });
