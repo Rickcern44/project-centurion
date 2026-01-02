@@ -1,6 +1,8 @@
-@HostAddresss = http://localhost:5111
+### Health Check
+GET {{hostPort}}/health
 
-POST {{HostAddresss}}/api/v1/leadingestion?leadSource={{$random.uuid}}
+### Ingest Lead
+POST {{hostPort}}/api/v1/leadingestion?leadSource={{$random.uuid}}
 Accept: application/json
 Content-Type: application/json
 
